@@ -1,0 +1,32 @@
+{
+  "name": "softflesh",
+  "version": "1.0.0",
+  "description": "SoftFlesh.js — мягкие деформации для веб-игр на Three.js: вмятины, сплющивание, желе, тряска, волны и взаимодействие мягких тел в реальном времени",
+  "type": "module",
+  "main": "dist/softflesh.cjs",
+  "module": "dist/softflesh.module.js",
+  "types": "dist/softflesh.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/softflesh.d.ts",
+      "import": "./dist/softflesh.module.js",
+      "require": "./dist/softflesh.cjs",
+      "default": "./dist/softflesh.module.js"
+    },
+    "./script": "./dist/softflesh.min.js"
+  },
+  "files": ["dist", "src", "tests", "README.md"],
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node tests/run.mjs"
+  },
+  "keywords": ["three.js", "softbody", "deform", "jiggle", "squish", "webgl", "3d", "physics", "games"],
+  "license": "MIT",
+  "peerDependencies": {
+    "three": ">=0.150"
+  },
+  "devDependencies": {
+    "three": "0.170.0",
+    "esbuild": "0.24.0"
+  }
+}
